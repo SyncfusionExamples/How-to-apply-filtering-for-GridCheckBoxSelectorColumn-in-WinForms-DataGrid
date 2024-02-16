@@ -35,6 +35,7 @@
             // sfDataGrid1
             // 
             this.sfDataGrid1.AccessibleName = "Table";
+            this.sfDataGrid1.AutoGenerateColumns = false;
             this.sfDataGrid1.Location = new System.Drawing.Point(44, 12);
             this.sfDataGrid1.Name = "sfDataGrid1";
             this.sfDataGrid1.SelectionMode = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Extended;

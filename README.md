@@ -58,6 +58,6 @@ sfDataGrid1.SelectionChanged += SfDataGrid1_SelectionChanged;
  ```
 
  
- ![SfDataGrid_SelectorColumnFiltering.gif](https://support.syncfusion.com/kb/agent/attachment/article/14532/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4MzEwIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.d7MxUW6XYmit3UFsWZZqvWtd1ADppPW_XblgJvfnueI) 
+ ![SfDataGrid_SelectorColumnFiltering.gif](https://support.syncfusion.com/kb/agent/attachment/article/14532/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4NTI5Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.aSUxi_eGVmHgtZ5IpW5hC7j2oaSa8oOYknitNTm8B38)
 
 Take a moment to peruse the [WinForms DataGrid - ViewFilter](https://help.syncfusion.com/windowsforms/datagrid/filtering#view-filtering) documentation, where you can find about the clipboard operations with code examples.

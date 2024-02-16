@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,8 @@ namespace SfDataGrid_Demo_4_8.Model
 
         private int _orderId;
         private string _customerId;
-        private int _unitPrice;
         private int _quantiy;
         private double _discount;
-        private bool isClosed;
-        private string _contactNumber;
-        private DateTime deliveryDate;
-        private string hyperlink;
-        private int shipCityId;
-        private string _products;
 
 
         #endregion
@@ -32,7 +26,6 @@ namespace SfDataGrid_Demo_4_8.Model
         /// Gets or sets the order ID.
         /// </summary>
         /// <value>The order ID.</value>
-
         public int OrderID
         {
             get
@@ -46,24 +39,10 @@ namespace SfDataGrid_Demo_4_8.Model
             }
         }
 
-        public bool IsClosed
-        {
-            get
-            {
-                return isClosed;
-            }
-            set
-            {
-                isClosed = value;
-                RaisePropertyChanged("IsClosed");
-            }
-        }
-
         /// <summary>
         /// Gets or sets the customer ID.
         /// </summary>
         /// <value>The customer ID.</value>
-
         public string CustomerID
         {
             get
@@ -74,24 +53,6 @@ namespace SfDataGrid_Demo_4_8.Model
             {
                 _customerId = value;
                 RaisePropertyChanged("CustomerID");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the unit price.
-        /// </summary>
-        /// <value>The unit price.</value>
-
-        public int UnitPrice
-        {
-            get
-            {
-                return _unitPrice;
-            }
-            set
-            {
-                _unitPrice = value;
-                RaisePropertyChanged("UnitPrice");
             }
         }
 
@@ -126,84 +87,6 @@ namespace SfDataGrid_Demo_4_8.Model
             {
                 _discount = value;
                 RaisePropertyChanged("Discount");
-            }
-        }
-
-        public string Hyperlink
-        {
-            get
-            {
-                return hyperlink;
-            }
-            set
-            {
-                hyperlink = value;
-                RaisePropertyChanged("Hyperlink");
-            }
-
-        }
-
-        public DateTime OrderDate
-        {
-            get
-            {
-                return deliveryDate;
-            }
-            set
-            {
-                deliveryDate = value;
-                RaisePropertyChanged("OrderDate");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the contact number.
-        /// </summary>
-        /// <value>
-        /// The contact number.
-        /// </value>
-        public string ContactNumber
-        {
-            get
-            {
-                return _contactNumber;
-            }
-            set
-            {
-                _contactNumber = value;
-                RaisePropertyChanged("ContactNumber");
-            }
-        }
-
-        public int ShipCityID
-        {
-            get
-            {
-                return shipCityId;
-            }
-            set
-            {
-                shipCityId = value;
-                RaisePropertyChanged("ShipCityID");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the products.
-        /// </summary>
-        /// <value>
-        /// The products.
-        /// </value>
-        public string Products
-        {
-            get
-            {
-                return _products;
-            }
-            set
-            {
-                _products = value;
-                RaisePropertyChanged("Products");
             }
         }
 

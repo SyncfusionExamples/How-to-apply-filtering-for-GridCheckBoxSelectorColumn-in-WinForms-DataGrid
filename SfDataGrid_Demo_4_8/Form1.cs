@@ -31,47 +31,15 @@ namespace SfDataGrid_Demo_4_8
         {
             InitializeComponent();
             selectedItems = new ObservableCollection<object>();
-            orderInfo = new OrderInfoCollection(250000);
-            NumberFormatInfo nfi = new NumberFormatInfo();
-            nfi.NumberDecimalDigits = 0;
-            nfi.NumberGroupSizes = new int[] { };
+            orderInfo = new OrderInfoCollection(25);
 
             this.sfDataGrid1.Columns.Add(new GridCheckBoxSelectorColumn() { MappingName = "Select", HeaderText = "Select"});
             this.sfDataGrid1.SelectionMode = Syncfusion.WinForms.DataGrid.Enums.GridSelectionMode.Multiple;
             this.sfDataGrid1.DataSource = orderInfo.OrdersListDetails;
-            this.sfDataGrid1.Columns.Add(new GridNumericColumn() { MappingName = "OrderID", HeaderText = "Order ID", NumberFormatInfo = nfi });
+            this.sfDataGrid1.Columns.Add(new GridNumericColumn() { MappingName = "OrderID", HeaderText = "Order ID" });
             this.sfDataGrid1.Columns.Add(new GridTextColumn() { MappingName = "CustomerID", HeaderText = "Customer ID" });
-            this.sfDataGrid1.Columns.Add(new GridTextColumn() { MappingName = "ContactNumber", HeaderText = "Contact Number" });
-            this.sfDataGrid1.Columns["ContactNumber"].CellStyle.HorizontalAlignment = HorizontalAlignment.Right;
-            NumberFormatInfo numberFormat = Application.CurrentCulture.NumberFormat.Clone() as NumberFormatInfo;
-            numberFormat.CurrencyDecimalDigits = 0;
-            numberFormat.CurrencyGroupSizes = new int[] { };
-
-            this.sfDataGrid1.Columns.Add(new GridNumericColumn()
-            {
-                MappingName = "UnitPrice",
-                HeaderText = "Unit Price",
-                FormatMode = FormatMode.Currency,
-                NumberFormatInfo = numberFormat
-            });
-
-            numberFormat = Application.CurrentCulture.NumberFormat.Clone() as NumberFormatInfo;
-            numberFormat.NumberDecimalDigits = 0;
-            numberFormat.NumberGroupSizes = new int[] { };
-            this.sfDataGrid1.Columns.Add(new GridNumericColumn()
-            {
-                HeaderText = "Quantity",
-                MappingName = "Quantity",
-                FormatMode = FormatMode.Numeric,
-                NumberFormatInfo = numberFormat
-            });
-
-            numberFormat = Application.CurrentCulture.NumberFormat.Clone() as NumberFormatInfo;
-            numberFormat.PercentDecimalDigits = 0;
-            numberFormat.NumberGroupSizes = new int[] { };
-            this.sfDataGrid1.Columns.Add(new GridNumericColumn() { MappingName = "Discount", HeaderText = "Discount", FormatMode = FormatMode.Percent, NumberFormatInfo = numberFormat });
-            this.sfDataGrid1.Columns.Add(new GridDateTimeColumn() { MappingName = "OrderDate", HeaderText = "Order Date", FilterMode = ColumnFilter.DisplayText });
-            this.sfDataGrid1.Columns.Add(new GridHyperlinkColumn() { MappingName = "Hyperlink", HeaderText = "Order URI" });
+            this.sfDataGrid1.Columns.Add(new GridNumericColumn() { MappingName = "Quantity", HeaderText = "Quantity" });
+            this.sfDataGrid1.Columns.Add(new GridNumericColumn() { MappingName = "Discount", HeaderText = "Discount", FormatMode = FormatMode.Percent });
 
             sfDataGrid1.CellClick += SfDataGrid1_CellClick;
             sfDataGrid1.SelectionChanged += SfDataGrid1_SelectionChanged;
@@ -103,6 +71,7 @@ namespace SfDataGrid_Demo_4_8
                     sfDataGrid1.View.RefreshFilter();
                     recordsfiltered = false;
                 }
+                this.sfDataGrid1.SelectedItems.Clear();
                 selectedItems.ForEach(x => this.sfDataGrid1.SelectedItems.Add(x));
             }
         }
